@@ -1,0 +1,43 @@
+.Main{
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,.1);
+    padding: 40px 100px;
+    width: 50%;
+    margin: auto;
+    margin-top: 80px;
+    border-radius: 15px;
+    &__Block{
+
+        &-text{
+           font-size: 13px;
+        }
+
+        &-works{
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0,0,0,.1);
+            width: 40%;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+
+            &__work{
+
+                &-button{
+                    background-color: #a430cd;
+                    border-radius: 15px;
+                    color: white;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &__succes{
+            &-text{
+                font-size: 29px;
+            }
+        }
+
+
+
+    }
+}
