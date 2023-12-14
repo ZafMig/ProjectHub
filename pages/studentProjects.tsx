@@ -25,7 +25,22 @@ const Projects = () =>{
                     <h1 className={classes["Main__Block__succes-text"]}>Выполненные работы</h1>
 
                     <div className={classes["Main__Block__succec-works"]}>
-
+                        <div className={classes["Main__Block__succes-works-complete"]}>
+                            <p className={classes["Main__Block__succes-works-complete-text"]}>Имя проекта</p>
+                            <p className={classes["Main__Block__succes-works-complete-textt"]}>Подробнее</p> 
+                        </div>
+                    </div>
+                    <div className={classes["Main__Block__succec-works"]}>
+                        <div className={classes["Main__Block__succes-works-complete"]}>
+                            <p className={classes["Main__Block__succes-works-complete-text"]}>Имя проекта</p>
+                            <p className={classes["Main__Block__succes-works-complete-textt"]}>Подробнее</p> 
+                        </div>
+                    </div>
+                    <div className={classes["Main__Block__succec-works"]}>
+                        <div className={classes["Main__Block__succes-works-complete"]}>
+                            <p className={classes["Main__Block__succes-works-complete-text"]}>Имя проекта</p>
+                            <p className={classes["Main__Block__succes-works-complete-textt"]}>Подробнее</p> 
+                        </div>
                     </div>
 
                 </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "../pages/style.pages/menu.module.scss"
+import classes from "./style.components/menu.module.scss"
 import Link from "next/link";
 
 const Header = () => {
@@ -20,7 +20,7 @@ const Header = () => {
 
                <div className={classes["Header__Menu__Main__block"]}>
                <Link href="/bell" className={classes["Header__Menu__Main__icons"]}><img width="25" height="25" src="https://img.icons8.com/ios-filled/50/appointment-reminders--v1.png" alt="appointment-reminders--v1"/></Link>
-               <Link href="/account" className={classes["eader__Menu__Main__icons"]}><img width="30" height="30" src="https://img.icons8.com/ios/50/user-male-circle--v1.png" alt="user-male-circle--v1"/></Link>
+               <Link href="/auth" className={classes["eader__Menu__Main__icons"]}><img width="30" height="30" src="https://img.icons8.com/ios/50/user-male-circle--v1.png" alt="user-male-circle--v1"/></Link>
                </div>
             </div>
         </div>

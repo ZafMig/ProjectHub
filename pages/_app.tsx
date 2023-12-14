@@ -1,5 +1,13 @@
-import type { AppProps } from 'next/app'
+// _app.tsx
+import { AppProps } from 'next/app';
+import { AuthProvider } from "../Context/AuthContext"
 
-export default function MyApp({ Component, pageProps }: AppProps) {
-    return <Component {...pageProps} />
-}
+const MyApp = ({ Component, pageProps }: AppProps) => {
+  return (
+    <AuthProvider>
+      <Component {...pageProps} />
+    </AuthProvider>
+  );
+};
+
+export default MyApp;

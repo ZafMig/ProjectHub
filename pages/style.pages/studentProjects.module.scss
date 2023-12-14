@@ -16,9 +16,10 @@
             background-color: #fff;
             box-shadow: 0 0 15px rgba(0,0,0,.1);
             width: 40%;
-            height: 150px;
             display: flex;
             justify-content: center;
+            border-radius: 15px;
+            
 
             &__work{
 
@@ -34,6 +35,28 @@
         &__succes{
             &-text{
                 font-size: 29px;
+            }
+            &-works{
+                &-complete{
+                    background-color: #fff;
+                    box-shadow: 0 0 15px rgba(0,0,0,.1);
+                    width: 45%;
+                   
+                    display: flex;
+                    justify-content: space-between;
+                    border-radius: 15px;
+                    margin: 10px;
+                    &-text{
+                       padding: 10px;
+                    }
+                    &-textt{
+                        padding: 10px;
+                        background-color: #a430cd;
+                        border-radius: 15px;
+                        color: #fff;
+                        cursor: pointer;
+                }
+                }
             }
         }
 

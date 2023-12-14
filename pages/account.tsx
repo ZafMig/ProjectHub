@@ -1,23 +1,49 @@
+
+
+
 import classes from "./style.pages/account.module.scss"
-import Header from "../Components/Header"
+import Header from "../Components/Header";
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { useAuth } from "../Context/AuthContext"; // Путь к вашему контексту авторизации
 
-const Account = () =>{
-    return(
-       <>
-       <Header/>
+const Account = () => {
+  const router = useRouter();
+  const { user, getUser } = useAuth(); // Предполагается, что у вас есть метод getUser для получения пользователя
 
-       <div className={classes["Main"]}>
-        <div className={classes["Main__Account"]}>
-            <div className={classes["Main__Account-block"]}>
-                <h1 className={classes["Main__Account-block__text"]}>Портфолио</h1>
-                <img width="100" height="100" src="https://img.icons8.com/ios/50/user-male-circle--v1.png" alt="user-male-circle--v1"/>
-            </div>
+  useEffect(() => {
+    const checkAccount = async () => {
+      try {
+        const userData = await getUser(); // Получение данных пользователя (предполагается, что метод возвращает пользователя или null)
+        if (!userData) {
+          // Если у пользователя нет аккаунта, перенаправляем на страницу авторизации
+          router.push('/auth'); // Замените '/login' на путь к вашей странице авторизации
+        }
+      } catch (error) {
+        console.error('Ошибка при проверке аккаунта:', error);
+      }
+    };
 
-        </div>
+    checkAccount();
+  }, [router, getUser]);
 
-       </div>
-       </>
-    )
-}
+
+  return (
+    <>
+    <Header/>
+
+    <div className={classes["Main"]}>
+     <div className={classes["Main__Account"]}>
+         <div className={classes["Main__Account-block"]}>
+             <h1 className={classes["Main__Account-block__text"]}>Портфолио</h1>
+             <img width="100" height="100" src="https://img.icons8.com/ios/50/user-male-circle--v1.png" alt="user-male-circle--v1"/>
+         </div>
+
+     </div>
+
+    </div>
+    </>
+  );
+};
 
 export default Account;
